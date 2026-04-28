@@ -1,0 +1,32 @@
+body{
+    background-color: #1f2923;
+}
+
+
+
+.main{
+    color: #fff;
+    font-size: 1.5em;
+    margin: 50px auto 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+.main > h1{
+    color: #2af079;
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    font-variation-settings:"slnt" 0,"wdth" 151,"GRAD" 0,"ROND" 60;
+}
+
+.links > a{
+    text-decoration: none;
+    color: #fff;
+        font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    font-variation-settings:"slnt" 0,"wdth" 151,"GRAD" 0,"ROND" 60;
+
+}
