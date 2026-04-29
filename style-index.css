@@ -1,7 +1,11 @@
-body{
-    background-color: #1f2923;
+:root{
+    --main-color: hsl(27, 87%, 55%);
+    --background-color: hsl(27, 24%, 8%);
 }
 
+body{
+    background-color: var(--background-color);
+}
 
 
 .main{
@@ -11,22 +15,119 @@ body{
     width: 100%;
     max-width: 800px;
 }
-.main > h1{
-    color: #2af079;
+.top-title{
+    color: var(--main-color);
+    width: 100%;
+    font-size: 40px;
     font-family: "Google Sans Flex", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 900;
-    font-variation-settings:"slnt" 0,"wdth" 151,"GRAD" 0,"ROND" 60;
+    font-weight: 1000;
+    font-variation-settings:"slnt" 0,"wdth" 151,"GRAD" 0,"ROND" 100;
 }
 
-.links > a{
-    text-decoration: none;
-    color: #fff;
-        font-family: "Google Sans Flex", sans-serif;
+
+
+
+
+.container {
+    display: flex;
+    height: 500px;
+    border: 1px solid var(--main-color);
+    background-color: #00000000;
+    overflow: hidden;
+    font-family: sans-serif;
+    margin: 40px 0 0 0;
+}
+
+/* サイドバー（タブの親要素） */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+}
+
+/* 各タブのスタイル */
+.tab-item {
+    padding: 0 5px 0 0;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    background-color: var(--main-color);
+    color: #000;
+    font-size: 30px;
+    font-family: "Google Sans Flex", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 900;
-    font-variation-settings:"slnt" 0,"wdth" 151,"GRAD" 0,"ROND" 60;
+    font-weight: 600;
+    font-variation-settings:"slnt" 0,"wdth" 40,"GRAD" 0,"ROND" 100;
 
+}
+
+/* アクティブなタブ */
+.tab-item.active {
+    background-color: #00000000; /* コンテンツエリアと同じ背景色 */
+    color: var(--main-color);
+}
+
+/* 右側のコンテンツエリア */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    color: var(--main-color);
+}
+.content> h2{
+    font-size: 40px;
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-variation-settings:"slnt" 0,"wdth" 40,"GRAD" 0,"ROND" 100;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+
+
+
+.info-item {
+    display: flex;
+    margin-bottom: 2px;
+    font-size: 25px;
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-variation-settings:"slnt" 0,"wdth" 60,"GRAD" 0,"ROND" 0;
+}
+.info-label {
+    width: 100px;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    text-align: center;
+}
+.info-value {
+    padding: 5px 10px 5px 10px;
+    background-color: #00000000;
+    color: var(--main-color);
+}
+
+
+.note{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.note a{
+    color: hsl(44, 87%, 55%);
 }

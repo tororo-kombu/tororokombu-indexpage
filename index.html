@@ -11,15 +11,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,GRAD,ROND@6..144,-10..0,25..151,1..1000,0..100,0..100&display=swap" rel="stylesheet">
 <body>
     <div class="main">
-        <h1>Welcome to<br>Tororokombu's homepage.</h1>
-        <div class="links">
-            <a href="">
-                <div class="link-item">漫画リレー</div>
-            </a>
-            <a href="">
-                <div class="link-item">example</div>
-            </a>
+        <div class="top-title">Welcome to<br>Tororokombu's homepage.</div>
+        <div class="container">
+            <div class="tabs">
+                <div class="tab-item active" onclick="openTab(event, 'tab1')">ABOUT</div>
+                <div class="tab-item" onclick="openTab(event, 'tab2')">APP</div>
+                <div class="tab-item" onclick="openTab(event, 'tab3')">LINK</div>
+            </div>
+
+            <div class="content-area">
+                <div id="tab1" class="content active">
+                    <h2>とろろこんぶ</h2>
+                    <div class="wrap-info">
+                        <div class="info-item">
+                            <div class="info-label">Nation</div>
+                            <div class="info-value">Japan</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Liking</div>
+                            <div class="info-value">Tororokombu</div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <p>こんな場所までお越しいただきありがとうございます。漫画リレー(mangarelay.tororo-kombu.com)というサービスを運営しています。ルートページに何も無いのは悲しいのでこのページを用意しました。<br>日本の伝統的な食品であるとろろ昆布については<a target="_blank" href="https://ja.wikipedia.org/wiki/%E3%81%A8%E3%82%8D%E3%82%8D%E6%98%86%E5%B8%83">こちら</a>をご覧ください。<br><br>さて、書くことが無くなりました………さようなら。</p>
+                    </div>
+                </div>
+
+                <div id="tab2" class="content">
+                    <h2>APP</h2>
+                    <div class="wrap-apps">
+                        <a target="_blank" href="https://mangarelay.tororo-kombu.com" class="app-item">
+                            <div class="app-title">漫画リレー</div>
+                            <div class="app-description">みんなで漫画を描くサービス</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="tab3" class="content">
+                    <h2>LINK</h2>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        function openTab(evt, tabName) {
+            const contents = document.getElementsByClassName("content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            const tabs = document.getElementsByClassName("tab-item");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
