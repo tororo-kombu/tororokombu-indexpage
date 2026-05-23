@@ -6,6 +6,10 @@
 body{
     background-color: var(--background-color);
 }
+a{
+    text-decoration: none;
+    color: currentColor;
+}
 
 
 .main{
@@ -27,6 +31,13 @@ body{
 }
 
 
+
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
 
 
 
@@ -130,4 +141,22 @@ body{
 }
 .note a{
     color: hsl(44, 87%, 55%);
+}
+
+
+
+.app-item:hover{
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+.app-icon{
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px 10px 0;
+}
+.app-description{
+    font-size: 16px;
+}
+.app-title{
+    margin-top: 18px;
 }
