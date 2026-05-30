@@ -1,13 +1,13 @@
 :root{
-    --main-color: hsl(27, 87%, 55%);
-    --background-color: hsl(27, 24%, 8%);
+    --main-color: hsl(75.29deg 84.97% 69.55%);
+    --background-color: hsl(75deg 31% 6.72%);
 }
 
 body{
     background-color: var(--background-color);
 }
 a{
-    text-decoration: none;
+    text-decoration: underline;
     color: currentColor;
 }
 
@@ -139,15 +139,15 @@ a{
     font-size: 20px;
     margin-top: 20px;
 }
-.note a{
-    color: hsl(44, 87%, 55%);
-}
 
 
 
 .app-item:hover{
     background-color: var(--main-color);
     color: var(--background-color);
+}
+.app-item{
+    text-decoration: none;
 }
 .app-icon{
     width: 80px;
